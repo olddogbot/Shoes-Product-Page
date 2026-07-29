@@ -6,8 +6,8 @@
 (function () {
     'use strict';
 
-    /* ---------- 微信号（统一配置，便于维护） ---------- */
-    var WECHAT_ID = 'TFYTXXAY';
+    /* ---------- 微信号（统一配置，改这里即可全局生效） ---------- */
+    var WECHAT_ID = 'Bb0b25';
 
     /* ---------- Toast 提示 ---------- */
     var toastTimer = null;
@@ -504,8 +504,21 @@
         }, { passive: false });
     }
 
+    /* ---------- 全局同步微信号：用 WECHAT_ID 覆盖页面所有位置 ---------- */
+    function syncWechatId() {
+        // 1. 所有显示微信号的文本元素
+        document.querySelectorAll('.wxid, .modal-wxid').forEach(function (el) {
+            el.textContent = WECHAT_ID;
+        });
+        // 2. 所有带 data-copy 的按钮（复制 / 加微信下单）
+        document.querySelectorAll('[data-copy]').forEach(function (el) {
+            el.setAttribute('data-copy', WECHAT_ID);
+        });
+    }
+
     /* ---------- 初始化 ---------- */
     function init() {
+        syncWechatId();      // 最先同步微信号，确保后续复制逻辑读到正确值
         initImageFallback();
         initLazyLoad();
         initRevealAnimation();
