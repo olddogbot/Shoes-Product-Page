@@ -154,6 +154,152 @@
         reveals.forEach(function (el) { io.observe(el); });
     }
 
+    /* ---------- Tab 切换逻辑 ---------- */
+    // 首页 section 锚点映射（data-section => 目标选择器）
+    var HOME_SECTIONS = {
+        top:       '.hero-subtitle',
+        products:  'h2:has(+ .gallery) ~ ul.gallery, h2:nth-of-type(1)',
+        contact:   'h2:has(+ .contact-card), h2:nth-of-type(2)',
+        craft:     'h2:nth-of-type(3)',
+        warehouse: 'h2:nth-of-type(4)',
+        factory:   'h2:nth-of-type(5)',
+        about:     'h2:nth-of-type(6)',
+        service:   'h2:nth-of-type(7)'
+    };
+
+    function switchTab(tabName, opts) {
+        opts = opts || {};
+        var panels = document.querySelectorAll('.tab-panel');
+        var buttons = document.querySelectorAll('.tab-btn');
+        if (!panels.length) return;
+
+        var targetPanel = null;
+        panels.forEach(function (p) {
+            var isTarget = (p.getAttribute('data-tab') === tabName);
+            p.classList.toggle('active', isTarget);
+            if (isTarget) targetPanel = p;
+            // 用 hidden 与 active 双重控制，保证不支持 CSS 选择器时也安全
+            if (isTarget) {
+                p.removeAttribute('hidden');
+            } else {
+                p.setAttribute('hidden', '');
+            }
+        });
+
+        buttons.forEach(function (b) {
+            var isTarget = (b.getAttribute('data-tab') === tabName);
+            b.classList.toggle('active', isTarget);
+            if (isTarget) b.setAttribute('aria-current', 'true');
+            else b.removeAttribute('aria-current');
+        });
+
+        // 切换到新 Tab 时，滚动到顶部
+        if (!opts.keepScroll) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 触发新 panel 的滚动入场动画（对未添加 visible 的 reveal 重新执行）
+        if (targetPanel && 'IntersectionObserver' in window) {
+            var reveals = targetPanel.querySelectorAll('.reveal:not(.visible)');
+            reveals.forEach(function (el) {
+                // 简单起见直接添加 visible（切换时内容是瞬间进入视口）
+                el.classList.add('visible');
+            });
+        }
+
+        // 对新 panel 中 data-src 图片做懒加载（以防尚未观察）
+        if (targetPanel) {
+            var pending = targetPanel.querySelectorAll('img[data-src]');
+            pending.forEach(function (img) {
+                var src = img.getAttribute('data-src');
+                if (!src) return;
+                var errOnce = function () {
+                    img.removeEventListener('error', errOnce);
+                    replaceWithPlaceholder(img);
+                };
+                img.addEventListener('error', errOnce);
+                img.src = src;
+                img.removeAttribute('data-src');
+            });
+        }
+
+        // 如果带了跳转参数（首页菜单 Tab 跳转首页的某 section）
+        if (opts && opts.section && tabName === 'home') {
+            setTimeout(function () {
+                scrollToHomeSection(opts.section);
+            }, 150);
+        }
+    }
+
+    function scrollToHomeSection(sectionKey) {
+        var homePanel = document.getElementById('tab-home');
+        if (!homePanel) return;
+        var sel = HOME_SECTIONS[sectionKey];
+        var target = null;
+        if (sel) {
+            try { target = homePanel.querySelector(sel); } catch (err) { /* ignore */ }
+        }
+        // 兜底：按 sectionKey → 对应的序号查找 h2
+        if (!target) {
+            var keyOrder = ['top', 'products', 'contact', 'craft', 'warehouse', 'factory', 'about', 'service'];
+            var idx = keyOrder.indexOf(sectionKey);
+            if (idx >= 0) {
+                var h2s = homePanel.querySelectorAll('h2');
+                if (idx === 0) {
+                    target = homePanel.querySelector('.hero-subtitle') || h2s[0];
+                } else if (idx <= h2s.length) {
+                    target = h2s[idx - 1];
+                }
+            }
+        }
+        if (target) {
+            var y = target.getBoundingClientRect().top + window.pageYOffset - 70;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    }
+
+    function initTabEvents() {
+        // 1) 底部 Tab 按钮切换
+        document.addEventListener('click', function (e) {
+            var tabBtn = e.target.closest('.tab-btn');
+            if (tabBtn) {
+                e.preventDefault();
+                var tab = tabBtn.getAttribute('data-tab');
+                if (tab) switchTab(tab);
+                return;
+            }
+
+            // 2) 首页菜单 Tab 内的快速跳转卡片（跳回首页并滚动到具体 section）
+            var jumpCard = e.target.closest('.menu-card[data-jump]');
+            if (jumpCard) {
+                e.preventDefault();
+                var targetTab = jumpCard.getAttribute('data-jump') || 'home';
+                var targetSection = jumpCard.getAttribute('data-section') || 'top';
+                switchTab(targetTab, { section: targetSection, keepScroll: false });
+                return;
+            }
+
+            // 3) 分类锚点（在商城 Tab 内跳分类）
+            var catLink = e.target.closest('a.shop-cat');
+            if (catLink) {
+                var href = catLink.getAttribute('href') || '';
+                if (href.charAt(0) === '#' && href.length > 1) {
+                    var targetId = href.slice(1);
+                    var el = document.getElementById(targetId);
+                    if (el) {
+                        e.preventDefault();
+                        var y = el.getBoundingClientRect().top + window.pageYOffset - 70;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                }
+                return;
+            }
+        });
+
+        // 4) 初始化：仅激活 home（index.html 默认值，双保险）
+        switchTab('home', { keepScroll: true });
+    }
+
     /* ---------- 事件委托 ---------- */
     function initEvents() {
         document.addEventListener('click', function (e) {
@@ -180,7 +326,7 @@
                 return;
             }
 
-            // 底部操作栏 / 打开微信按钮
+            // 底部操作栏 / 打开微信按钮（旧 action-bar 已隐藏，保留逻辑备用）
             if (
                 target.closest('.btn-wechat') ||
                 target.closest('.btn-cta') ||
@@ -364,6 +510,7 @@
         initLazyLoad();
         initRevealAnimation();
         initEvents();
+        initTabEvents();       // Tab 切换 + 菜单卡片跳转
         preventTouchThrough();
     }
 

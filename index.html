@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -18,7 +18,8 @@
         <h1>工厂微利直销，拒绝暴利，一双都是批发价</h1>
     </header>
 
-    <article class="showcontent">
+    <!-- ============= Tab 1：首页 ============= -->
+    <article class="showcontent tab-panel active" id="tab-home" data-tab="home">
 
         <!-- 副标题 -->
         <div class="hero-subtitle reveal">
@@ -100,7 +101,7 @@
             运动装运动鞋加工厂-长期为世界各品牌运动鞋代工，十多年来积累了丰厚的基础，为拓展业务，现向全国诚招批发（实体店、淘宝、京东、微商等）免费代理加盟，支持一双代发，量大可免费进行定制。
         </p>
 
-        <!-- 客服 / 客户服务（保留原结构中的客户服务区块入口） -->
+        <!-- 客户服务 -->
         <h2 class="reveal">客户服务</h2>
         <div class="contact-card reveal">
             <div class="qr-box">
@@ -118,14 +119,422 @@
 
     </article>
 
-    <!-- 底部导航菜单 -->
-    <nav class="site-nav reveal" aria-label="主导航">
-        <ul>
-            <li><a href="#" class="active" aria-current="page">首页</a></li>
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">在线商城</a></li>
+    <!-- ============= Tab 2：首页菜单 ============= -->
+    <article class="showcontent tab-panel" id="tab-menu" data-tab="menu" hidden>
+
+        <div class="hero-subtitle reveal">
+            首页内容索引 &nbsp;|&nbsp; 点击卡片快速跳转到首页对应位置 &nbsp;|&nbsp; <b>莆田鞋</b>
+        </div>
+
+        <h2 class="reveal">首页菜单 · 快速入口</h2>
+
+        <div class="menu-card-grid reveal">
+            <a href="#tab-home" class="menu-card" data-jump="home" data-section="top">
+                <span class="menu-icon">🏠</span>
+                <span class="menu-title">首页顶部</span>
+                <span class="menu-desc">工厂直销横幅</span>
+            </a>
+            <a href="#tab-home" class="menu-card" data-jump="home" data-section="products">
+                <span class="menu-icon">👟</span>
+                <span class="menu-title">部分产品参考</span>
+                <span class="menu-desc">12 款热销运动鞋</span>
+            </a>
+            <a href="#tab-home" class="menu-card" data-jump="home" data-section="contact">
+                <span class="menu-icon">💬</span>
+                <span class="menu-title">联系方式</span>
+                <span class="menu-desc">复制微信号 + 二维码</span>
+            </a>
+            <a href="#tab-home" class="menu-card" data-jump="home" data-section="craft">
+                <span class="menu-icon">🔍</span>
+                <span class="menu-title">我们的做工</span>
+                <span class="menu-desc">工厂细节实拍 6 图</span>
+            </a>
+            <a href="#tab-home" class="menu-card" data-jump="home" data-section="warehouse">
+                <span class="menu-icon">📦</span>
+                <span class="menu-title">我们的仓库</span>
+                <span class="menu-desc">海量现货货源</span>
+            </a>
+            <a href="#tab-home" class="menu-card" data-jump="home" data-section="factory">
+                <span class="menu-icon">🏭</span>
+                <span class="menu-title">我们的生产线</span>
+                <span class="menu-desc">工厂车间实拍</span>
+            </a>
+            <a href="#tab-home" class="menu-card" data-jump="home" data-section="about">
+                <span class="menu-icon">📋</span>
+                <span class="menu-title">公司简介</span>
+                <span class="menu-desc">十年代工基础</span>
+            </a>
+            <a href="#tab-home" class="menu-card" data-jump="home" data-section="service">
+                <span class="menu-icon">🎧</span>
+                <span class="menu-title">客户服务</span>
+                <span class="menu-desc">微信联系客户</span>
+            </a>
+        </div>
+
+        <h2 class="reveal">合作方式</h2>
+        <div class="menu-coop reveal">
+            <div class="coop-item">
+                <span class="coop-icon">📤</span>
+                <div>
+                    <h3>一件代发</h3>
+                    <p>不用囤货，0 代理费，下单直接代发到顾客</p>
+                </div>
+            </div>
+            <div class="coop-item">
+                <span class="coop-icon">🏬</span>
+                <div>
+                    <h3>实体店批发</h3>
+                    <p>全国实体店、天猫、淘宝一级供货，量多价优</p>
+                </div>
+            </div>
+            <div class="coop-item">
+                <span class="coop-icon">📱</span>
+                <div>
+                    <h3>微商代理</h3>
+                    <p>发图卖货，厂家原图直供，支持货到付款</p>
+                </div>
+            </div>
+            <div class="coop-item">
+                <span class="coop-icon">🎨</span>
+                <div>
+                    <h3>定制代工</h3>
+                    <p>可定制 Logo / 包装 / 款式，承接 OEM 订单</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="reveal">加微信立即咨询</h2>
+        <div class="contact-card reveal">
+            <p class="tagline">莆田运动鞋</p>
+            <p class="sub-tagline">厂家批发 &nbsp; 诚招代理 &nbsp; 工厂原版开模1:1复刻</p>
+            <div class="qr-box">
+                <img data-src="style/images/code.jpg" data-keyword="微信二维码 首页菜单咨询" alt="首页菜单二维码">
+            </div>
+            <p class="step">↓ 第一步：[复制微信号]</p>
+            <div class="wx-line">
+                <span>微信：</span>
+                <span class="wxid">TFYTXXAY</span>
+                <button class="copy-btn" type="button" data-copy="TFYTXXAY">点击复制</button>
+            </div>
+            <p class="step">↓ 第二步：[打开微信，添加好友，长按粘贴查找]</p>
+            <a href="weixin://" class="openwx-btn" data-action="launch-wechat">打开微信</a>
+        </div>
+
+    </article>
+
+    <!-- ============= Tab 3：关于我们 ============= -->
+    <article class="showcontent tab-panel" id="tab-about" data-tab="about" hidden>
+
+        <div class="hero-subtitle reveal">
+            关于我们 · 了解我们的工厂、团队、实力 &nbsp;|&nbsp; <b>莆田鞋</b>
+        </div>
+
+        <h2 class="reveal">公司介绍</h2>
+        <div class="intro-img reveal">
+            <img data-src="style/images/abc4cbfce2ad82d7c26de5e992b090f8.jpg" data-keyword="关于我们 公司资质" alt="关于我们 公司介绍">
+        </div>
+        <p style="text-indent:2em;" class="reveal">
+            我们是一家坐落于福建莆田的专业运动鞋生产工厂，<b>长期为世界各大品牌提供代工服务</b>，
+            拥有<b>十多年</b>的制鞋经验和深厚的工艺积累。工厂占地面积超过 8000 平方米，
+            拥有<b>6 条现代化生产线</b>和超过 300 名熟练技术工人，年产能突破 500 万双。
+            我们以「<b>原厂开模 1:1 复刻</b>」为核心理念，从原材甄选、开模打版、车缝裁断、
+            贴合成型到成品检验，每一环节都对标国际大厂标准，确保<b>每一双鞋的做工与正品别无二致</b>。
+        </p>
+
+        <h2 class="reveal">我们的实力</h2>
+        <div class="about-strength reveal">
+            <div class="strength-item">
+                <span class="strength-num">10+</span>
+                <span class="strength-label">年制鞋经验</span>
+            </div>
+            <div class="strength-item">
+                <span class="strength-num">6</span>
+                <span class="strength-label">条标准化生产线</span>
+            </div>
+            <div class="strength-item">
+                <span class="strength-num">300+</span>
+                <span class="strength-label">名熟练技术工人</span>
+            </div>
+            <div class="strength-item">
+                <span class="strength-num">500W</span>
+                <span class="strength-label">年产能（双）</span>
+            </div>
+            <div class="strength-item">
+                <span class="strength-num">50+</span>
+                <span class="strength-label">长期合作品牌</span>
+            </div>
+            <div class="strength-item">
+                <span class="strength-num">0</span>
+                <span class="strength-label">代理费门槛</span>
+            </div>
+        </div>
+
+        <h2 class="reveal">我们的生产线</h2>
+        <ul class="gallery cols-2 reveal">
+            <li><img data-src="style/images/20180424162746.jpg" data-keyword="关于我们 生产线工厂" alt="关于我们 生产线01"></li>
+            <li><img data-src="style/images/20180424162752.jpg" data-keyword="关于我们 生产车间" alt="关于我们 生产线02"></li>
         </ul>
-    </nav>
+
+        <h2 class="reveal">我们的仓库</h2>
+        <div class="full-img reveal">
+            <img data-src="style/images/20180426094305.jpg" data-keyword="关于我们 仓库现货" alt="关于我们 仓库">
+        </div>
+
+        <h2 class="reveal">我们的做工</h2>
+        <ul class="gallery reveal">
+            <li><img data-src="style/images/21.jpg" data-keyword="关于我们 做工细节" alt="做工01"></li>
+            <li><img data-src="style/images/22.jpg" data-keyword="关于我们 车线工艺" alt="做工02"></li>
+            <li><img data-src="style/images/23.jpg" data-keyword="关于我们 鞋面材料" alt="做工03"></li>
+            <li><img data-src="style/images/24.jpg" data-keyword="关于我们 鞋底开模" alt="做工04"></li>
+            <li><img data-src="style/images/25.jpg" data-keyword="关于我们 鞋垫细节" alt="做工05"></li>
+            <li><img data-src="style/images/26.jpg" data-keyword="关于我们 鞋厂流水线" alt="做工06"></li>
+        </ul>
+
+        <h2 class="reveal">我们的承诺</h2>
+        <div class="about-promise reveal">
+            <div class="promise-item">
+                <span class="promise-mark">✓</span>
+                <div><h3>原厂 1:1 开模</h3><p>所有款型基于原厂数据开模复刻，版型、走线、材质与正品一致</p></div>
+            </div>
+            <div class="promise-item">
+                <span class="promise-mark">✓</span>
+                <div><h3>支持一件代发</h3><p>无需囤货，0 代理费，0 风险创业，厂家直发到您客户</p></div>
+            </div>
+            <div class="promise-item">
+                <span class="promise-mark">✓</span>
+                <div><h3>7 天无理由退换</h3><p>非人为损坏，支持 7 天无理由退换，售后无忧</p></div>
+            </div>
+            <div class="promise-item">
+                <span class="promise-mark">✓</span>
+                <div><h3>一手货源价格</h3><p>工厂直供无中间商，批发价即市场价 1~3 折，利润空间大</p></div>
+            </div>
+            <div class="promise-item">
+                <span class="promise-mark">✓</span>
+                <div><h3>支持定制代工</h3><p>可定制 Logo、包装、款式，OEM/ODM 大单面议</p></div>
+            </div>
+            <div class="promise-item">
+                <span class="promise-mark">✓</span>
+                <div><h3>每日更新原图</h3><p>厂家原图每日更新，微商直接转发朋友圈即可卖货</p></div>
+            </div>
+        </div>
+
+        <h2 class="reveal">联系我们 · 工厂直供</h2>
+        <div class="contact-card reveal">
+            <div class="qr-box">
+                <img data-src="style/images/code.jpg" data-keyword="关于我们 微信二维码" alt="关于我们 联系方式二维码">
+            </div>
+            <div class="wx-line">
+                <span>微信：</span>
+                <span class="wxid">TFYTXXAY</span>
+                <button class="copy-btn" type="button" data-copy="TFYTXXAY">点击复制</button>
+            </div>
+            <a href="weixin://" class="openwx-btn" data-action="launch-wechat">打开微信</a>
+        </div>
+
+    </article>
+
+    <!-- ============= Tab 4：在线商城 ============= -->
+    <article class="showcontent tab-panel" id="tab-shop" data-tab="shop" hidden>
+
+        <div class="hero-subtitle reveal">
+            在线商城 · 分类选款 · 爆款推荐 · 加微信立即下单 &nbsp;|&nbsp; <b>莆田鞋</b>
+        </div>
+
+        <h2 class="reveal">🔥 爆款分类</h2>
+        <div class="shop-cats reveal">
+            <a href="#shop-cat-basketball" class="shop-cat"><span>🏀</span>篮球鞋</a>
+            <a href="#shop-cat-running" class="shop-cat"><span>🏃</span>跑步鞋</a>
+            <a href="#shop-cat-board" class="shop-cat"><span>🛹</span>板鞋</a>
+            <a href="#shop-cat-dad" class="shop-cat"><span>👟</span>老爹鞋</a>
+            <a href="#shop-cat-canvas" class="shop-cat"><span>🎨</span>帆布鞋</a>
+            <a href="#shop-cat-boutique" class="shop-cat"><span>💎</span>精品复刻</a>
+        </div>
+
+        <!-- 篮球鞋 -->
+        <h2 class="reveal" id="shop-cat-basketball">🏀 篮球鞋系列</h2>
+        <ul class="shop-grid reveal">
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/01.jpg" data-keyword="篮球鞋 产品01" alt="篮球鞋01"></div>
+                <div class="shop-info">
+                    <p class="shop-name">空军一号 高帮板鞋</p>
+                    <p class="shop-price">￥<b>2XX</b> <span class="shop-origin">￥1299</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/04.jpg" data-keyword="篮球鞋 复刻" alt="篮球鞋02"></div>
+                <div class="shop-info">
+                    <p class="shop-name">科比系列 低帮战靴</p>
+                    <p class="shop-price">￥<b>3XX</b> <span class="shop-origin">￥1599</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/09.jpg" data-keyword="AJ 乔丹" alt="篮球鞋03"></div>
+                <div class="shop-info">
+                    <p class="shop-name">AJ1 芝加哥 高帮</p>
+                    <p class="shop-price">￥<b>4XX</b> <span class="shop-origin">￥1899</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/03.jpg" data-keyword="实战篮球鞋" alt="篮球鞋04"></div>
+                <div class="shop-info">
+                    <p class="shop-name">杜兰特 实战篮球鞋</p>
+                    <p class="shop-price">￥<b>3XX</b> <span class="shop-origin">￥1399</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 跑步鞋 -->
+        <h2 class="reveal" id="shop-cat-running">🏃 跑步鞋系列</h2>
+        <ul class="shop-grid reveal">
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/02.jpg" data-keyword="运动跑鞋 新款" alt="跑鞋01"></div>
+                <div class="shop-info">
+                    <p class="shop-name">Zoom 气垫跑鞋</p>
+                    <p class="shop-price">￥<b>2XX</b> <span class="shop-origin">￥1099</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/10.jpg" data-keyword="减震透气跑鞋" alt="跑鞋02"></div>
+                <div class="shop-info">
+                    <p class="shop-name">Pegasus 飞马 减震透气</p>
+                    <p class="shop-price">￥<b>3XX</b> <span class="shop-origin">￥1199</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/07.jpg" data-keyword="空军一号 跑鞋" alt="跑鞋03"></div>
+                <div class="shop-info">
+                    <p class="shop-name">Air Force 1 纯白低帮</p>
+                    <p class="shop-price">￥<b>2XX</b> <span class="shop-origin">￥899</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 板鞋 -->
+        <h2 class="reveal" id="shop-cat-board">🛹 板鞋系列</h2>
+        <ul class="shop-grid reveal">
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/05.jpg" data-keyword="板鞋 百搭" alt="板鞋01"></div>
+                <div class="shop-info">
+                    <p class="shop-name">SB Dunk 低帮板鞋</p>
+                    <p class="shop-price">￥<b>2XX</b> <span class="shop-origin">￥999</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/08.jpg" data-keyword="Yeezy 椰子鞋" alt="板鞋02"></div>
+                <div class="shop-info">
+                    <p class="shop-name">Yeezy 350 V2 椰子</p>
+                    <p class="shop-price">￥<b>4XX</b> <span class="shop-origin">￥1899</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/12.jpg" data-keyword="潮流板鞋" alt="板鞋03"></div>
+                <div class="shop-info">
+                    <p class="shop-name">Blazer 开拓者 高帮</p>
+                    <p class="shop-price">￥<b>2XX</b> <span class="shop-origin">￥799</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 老爹鞋 -->
+        <h2 class="reveal" id="shop-cat-dad">👟 老爹鞋系列</h2>
+        <ul class="shop-grid reveal">
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/06.jpg" data-keyword="老爹鞋 代理货源" alt="老爹鞋01"></div>
+                <div class="shop-info">
+                    <p class="shop-name">M2K Tekno 复古老爹鞋</p>
+                    <p class="shop-price">￥<b>3XX</b> <span class="shop-origin">￥1099</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/11.jpg" data-keyword="帆布鞋 百搭" alt="老爹鞋02"></div>
+                <div class="shop-info">
+                    <p class="shop-name">巴黎家 复古老爹鞋</p>
+                    <p class="shop-price">￥<b>4XX</b> <span class="shop-origin">￥1799</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 帆布鞋 -->
+        <h2 class="reveal" id="shop-cat-canvas">🎨 帆布鞋系列</h2>
+        <ul class="shop-grid reveal">
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/11.jpg" data-keyword="帆布鞋" alt="帆布鞋01"></div>
+                <div class="shop-info">
+                    <p class="shop-name">1970s 高帮帆布鞋</p>
+                    <p class="shop-price">￥<b>1XX</b> <span class="shop-origin">￥599</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item">
+                <div class="shop-thumb"><img data-src="style/images/05.jpg" data-keyword="板鞋 滑板鞋" alt="帆布鞋02"></div>
+                <div class="shop-info">
+                    <p class="shop-name">Vans 滑板帆布鞋</p>
+                    <p class="shop-price">￥<b>1XX</b> <span class="shop-origin">￥599</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 精品复刻 -->
+        <h2 class="reveal" id="shop-cat-boutique">💎 精品复刻推荐</h2>
+        <ul class="shop-grid reveal">
+            <li class="shop-item shop-hot">
+                <div class="shop-tag">🔥 热销</div>
+                <div class="shop-thumb"><img data-src="style/images/09.jpg" data-keyword="AJ1 精品复刻" alt="精品01"></div>
+                <div class="shop-info">
+                    <p class="shop-name">AJ1 芝加哥 · 顶级纯原</p>
+                    <p class="shop-price">￥<b>5XX</b> <span class="shop-origin">￥2099</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+            <li class="shop-item shop-hot">
+                <div class="shop-tag">⚡ 爆款</div>
+                <div class="shop-thumb"><img data-src="style/images/08.jpg" data-keyword="Yeezy 椰子 精品复刻" alt="精品02"></div>
+                <div class="shop-info">
+                    <p class="shop-name">Yeezy 350 V2 · 顶级纯原</p>
+                    <p class="shop-price">￥<b>5XX</b> <span class="shop-origin">￥2199</span></p>
+                    <button class="shop-buy" type="button" data-copy="TFYTXXAY">加微信下单</button>
+                </div>
+            </li>
+        </ul>
+
+        <h2 class="reveal">下单流程</h2>
+        <div class="shop-steps reveal">
+            <div class="step-item"><span class="step-num">1</span><p>加微信咨询款式<br>扫码或复制微信号</p></div>
+            <div class="step-arrow">→</div>
+            <div class="step-item"><span class="step-num">2</span><p>选款+确定码数<br>厂家提供实拍细节图</p></div>
+            <div class="step-arrow">→</div>
+            <div class="step-item"><span class="step-num">3</span><p>付款下单<br>支持微信/支付宝/货到付款</p></div>
+            <div class="step-arrow">→</div>
+            <div class="step-item"><span class="step-num">4</span><p>发货收货<br>厂家直发/7天无理由退换</p></div>
+        </div>
+
+        <h2 class="reveal">立即加微信 · 选款下单</h2>
+        <div class="contact-card reveal">
+            <div class="qr-box">
+                <img data-src="style/images/code.jpg" data-keyword="在线商城 微信下单" alt="在线商城二维码">
+            </div>
+            <div class="wx-line">
+                <span>微信：</span>
+                <span class="wxid">TFYTXXAY</span>
+                <button class="copy-btn" type="button" data-copy="TFYTXXAY">点击复制</button>
+            </div>
+            <a href="weixin://" class="openwx-btn" data-action="launch-wechat">打开微信</a>
+        </div>
+
+    </article>
 
     <!-- 页脚 -->
     <footer class="site-footer">
@@ -135,11 +544,25 @@
 
 </div>
 
-<!-- 底部固定操作栏 -->
-<div class="action-bar">
-    <button class="btn btn-wechat" type="button">微信：TFYTXXAY</button>
-    <button class="btn btn-cta" type="button">点击加我微信</button>
-</div>
+<!-- ============ 底部 Tab 导航栏（四键菜单） ============ -->
+<nav class="tab-nav" aria-label="底部主导航">
+    <button type="button" class="tab-btn tab-home active" data-tab="home">
+        <span class="tab-icon">🏠</span>
+        <span class="tab-label">首页</span>
+    </button>
+    <button type="button" class="tab-btn tab-menu" data-tab="menu">
+        <span class="tab-icon">📋</span>
+        <span class="tab-label">首页菜单</span>
+    </button>
+    <button type="button" class="tab-btn tab-about" data-tab="about">
+        <span class="tab-icon">💼</span>
+        <span class="tab-label">关于我们</span>
+    </button>
+    <button type="button" class="tab-btn tab-shop" data-tab="shop">
+        <span class="tab-icon">🛒</span>
+        <span class="tab-label">在线商城</span>
+    </button>
+</nav>
 
 <!-- 微信弹窗 -->
 <div class="wechat-mask" id="wechatMask"></div>
