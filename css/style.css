@@ -1229,3 +1229,168 @@ body {
         scroll-behavior: auto !important;
     }
 }
+
+/* ===========================================================
+   悦刻4~5代通配蛋系列 · 广东高考选题 产品组件样式
+   =========================================================== */
+
+/* 产品速览规格条 */
+.spec-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 14px 0 22px;
+}
+.spec-item {
+    padding: 12px 6px;
+    text-align: center;
+    border-radius: var(--radius-md);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.spec-item .spec-num {
+    display: block;
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1.3;
+}
+.spec-item .spec-label {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    line-height: 1.4;
+}
+
+/* 本仓优势规则卡 */
+.rule-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 14px 0 4px;
+}
+.rule-card {
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.rule-card .rule-icon {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.rule-card p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--text-sub);
+    line-height: 1.65;
+}
+.rule-card b {
+    color: var(--accent);
+}
+
+/* 口味标签 */
+.flavor-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 4px;
+}
+.flavor-tag {
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(255, 207, 23, 0.12);
+    border: 1px solid rgba(255, 207, 23, 0.35);
+    color: var(--accent);
+}
+
+/* 发货与售后须知 */
+.notice-box {
+    margin: 14px 0 4px;
+    padding: 16px;
+    border-radius: var(--radius-lg);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.notice-box h3 {
+    font-size: 0.95rem;
+    margin: 0 0 10px;
+    color: var(--text-main);
+}
+.notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 9px;
+}
+.notice-list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+.notice-list li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 8px var(--primary-glow);
+}
+.notice-list li b {
+    color: #fff;
+}
+
+/* 原始介绍图留存 */
+.src-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0 4px;
+}
+.src-card {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--card-border);
+}
+.src-card img {
+    width: 100%;
+    max-height: 320px;
+    display: block;
+    object-fit: contain;
+    background: rgba(0,0,0,0.25);
+    margin: 0 auto;
+}
+.src-card p {
+    padding: 8px 10px;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    margin: 0;
+    text-align: center;
+}
+
+/* 小屏适配 */
+@media (max-width: 600px) {
+    .spec-strip { grid-template-columns: repeat(2, 1fr); }
+    .src-grid { grid-template-columns: 1fr; }
+}
