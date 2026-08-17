@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>重庆高考选题｜悦刻4~5代通配蛋系列 · 产品介绍</title>
+  <style>
+    :root{
+      --bg:#0a0d14;
+      --panel:#121827;
+      --panel-2:#171f33;
+      --line:rgba(255,255,255,.08);
+      --text:#eef2ff;
+      --muted:#a9b3c9;
+      --brand:#62d6ff;
+      --brand-2:#86efac;
+      --danger:#ff8b8b;
+      --warn:#ffd56a;
+      --shadow:0 24px 60px rgba(0,0,0,.35);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(98,214,255,.15), transparent 32%),
+        radial-gradient(circle at top right, rgba(134,239,172,.10), transparent 28%),
+        linear-gradient(180deg,#090c13 0%, #0b1020 42%, #091019 100%);
+      line-height:1.65;
+    }
+    a{color:inherit}
+    .container{width:min(1200px, calc(100% - 32px)); margin:0 auto}
+    .section{padding:32px 0}
+    .section-title{
+      display:flex; align-items:center; gap:12px;
+      margin:0 0 18px; font-size:28px; line-height:1.2;
+    }
+    .section-title::before{
+      content:"";
+      width:8px; height:28px; border-radius:999px;
+      background:linear-gradient(180deg,var(--brand),var(--brand-2));
+      box-shadow:0 0 22px rgba(98,214,255,.45);
+    }
+    .section-desc{
+      margin:0 0 22px;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .hero{
+      position:relative;
+      min-height:92vh;
+      display:flex;
+      align-items:flex-end;
+      padding:36px 0 30px;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(4,8,15,.24) 0%, rgba(4,8,15,.58) 40%, rgba(4,8,15,.92) 100%),
+        url("广东高考选题_素材/微信图片_20260817051021.jpg") center/cover no-repeat;
+      transform:scale(1.04);
+      filter:saturate(1.1);
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:auto 0 0;
+      height:180px;
+      background:linear-gradient(180deg, transparent, rgba(9,12,19,.98));
+    }
+    .hero-inner{
+      position:relative; z-index:1;
+      display:grid;
+      grid-template-columns:1.25fr .9fr;
+      gap:24px;
+      align-items:end;
+      width:100%;
+    }
+    .hero-copy{
+      padding:28px;
+      border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg, rgba(12,16,27,.58), rgba(12,16,27,.82));
+      backdrop-filter:blur(10px);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      color:#d9ebff;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    h1{
+      margin:18px 0 14px;
+      font-size:clamp(34px, 5vw, 68px);
+      line-height:1.06;
+      letter-spacing:.02em;
+    }
+    .lead{
+      margin:0 0 18px;
+      font-size:18px;
+      color:#d5ddf1;
+      max-width:760px;
+    }
+    .hero-tags,.flavor-tags{
+      display:flex; flex-wrap:wrap; gap:10px;
+      padding:0; margin:0;
+      list-style:none;
+    }
+    .hero-tags li,.flavor-tags li{
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.06);
+      color:#f8fbff;
+      font-size:14px;
+    }
+    .hero-side{
+      display:grid;
+      gap:16px;
+    }
+    .mini-card,.card,.poster-card,.gallery-card,.warning-card{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(19,24,39,.94), rgba(10,13,22,.98));
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .mini-card{
+      padding:20px 22px;
+    }
+    .mini-card strong{
+      display:block;
+      font-size:28px;
+      color:#fff;
+      margin-bottom:6px;
+    }
+    .mini-card span{
+      color:var(--muted);
+      font-size:14px;
+    }
+    .mini-card.new{ border-color:rgba(255,213,106,.35); }
+    .mini-card.new strong{ color:var(--warn); }
+    .quick-grid,.info-grid,.poster-grid,.gallery-grid,.stock-grid{
+      display:grid;
+      gap:18px;
+    }
+    .quick-grid{grid-template-columns:repeat(4,1fr)}
+    .info-grid{grid-template-columns:1.1fr .9fr}
+    .card{padding:24px}
+    .card h3{
+      margin:0 0 12px;
+      font-size:22px;
+    }
+    .card p{margin:0; color:var(--muted)}
+    .notice-list,.steps,.spec-list{
+      list-style:none; padding:0; margin:0;
+      display:grid; gap:12px;
+    }
+    .notice-list li,.steps li,.spec-list li{
+      padding:14px 16px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);
+    }
+    .notice-list b,.steps b,.spec-list b{color:#fff}
+    .note-top{
+      display:flex; justify-content:space-between; gap:12px; align-items:center;
+      margin-bottom:14px;
+      color:#dbe8ff;
+    }
+    .accent{
+      color:var(--brand);
+      font-weight:700;
+    }
+    .spec-list li{
+      display:flex; justify-content:space-between; gap:14px;
+      align-items:flex-start;
+    }
+    .spec-list span:last-child{
+      color:#d9e4f8;
+      text-align:right;
+      max-width:65%;
+    }
+    .flavor-panel{
+      padding:26px;
+      border-radius:32px;
+      background:
+        linear-gradient(135deg, rgba(98,214,255,.12), rgba(134,239,172,.08)),
+        linear-gradient(180deg, rgba(20,28,45,.98), rgba(12,17,29,.98));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+    }
+    .poster-grid{
+      grid-template-columns:repeat(3,1fr);
+    }
+    .poster-card,.gallery-card{
+      overflow:hidden;
+    }
+    .poster-card img,.gallery-card img{
+      width:100%; display:block;
+      cursor:pointer;
+      transition:transform .35s ease, filter .35s ease;
+    }
+    .poster-card img{
+      aspect-ratio:3/4;
+      object-fit:contain;
+      background:#04060b;
+    }
+    .gallery-card img{object-fit:cover}
+    .poster-card:hover img,.gallery-card:hover img{
+      transform:scale(1.03);
+      filter:saturate(1.08);
+    }
+    .poster-card figcaption,.gallery-card figcaption{
+      padding:14px 16px 16px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .gallery-grid{
+      grid-template-columns:repeat(3,1fr);
+    }
+    .gallery-card.tall img{aspect-ratio:4/5}
+    .gallery-card.wide img{aspect-ratio:16/10}
+    .gallery-card.square img{aspect-ratio:1/1}
+    .stock-grid{
+      grid-template-columns:1.2fr .8fr .8fr;
+    }
+    .warning-card{
+      padding:26px;
+      background:
+        linear-gradient(180deg, rgba(41,17,17,.95), rgba(17,11,14,.98)),
+        #160d10;
+      border-color:rgba(255,130,130,.16);
+    }
+    .warning-card h3{margin:0 0 12px; font-size:22px; color:#fff1f1}
+    .warning-card p{margin:0 0 12px; color:#f2c9c9}
+    .steps{
+      counter-reset:item;
+    }
+    .steps li{
+      position:relative;
+      padding-left:56px;
+      color:#f6dede;
+    }
+    .steps li::before{
+      counter-increment:item;
+      content:counter(item);
+      position:absolute; left:16px; top:14px;
+      width:28px; height:28px;
+      border-radius:50%;
+      background:rgba(255,255,255,.1);
+      color:#fff;
+      display:grid; place-items:center;
+      font-weight:700;
+    }
+    .footer{
+      padding:0 0 42px;
+      color:#8f9bb3;
+      font-size:13px;
+      text-align:center;
+    }
+    .lightbox{
+      position:fixed; inset:0; z-index:99;
+      display:none; place-items:center;
+      background:rgba(4,8,14,.86);
+      padding:20px;
+    }
+    .lightbox.open{display:grid}
+    .lightbox img{
+      max-width:min(1200px, 96vw);
+      max-height:88vh;
+      border-radius:20px;
+      box-shadow:0 30px 90px rgba(0,0,0,.55);
+    }
+    .lightbox button{
+      position:absolute; top:20px; right:20px;
+      width:46px; height:46px;
+      border:none; border-radius:50%;
+      background:rgba(255,255,255,.12);
+      color:#fff; font-size:24px;
+      cursor:pointer;
+    }
+    @media (max-width: 1080px){
+      .hero-inner,.info-grid,.stock-grid{grid-template-columns:1fr}
+      .quick-grid{grid-template-columns:repeat(2,1fr)}
+      .poster-grid,.gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .hero{min-height:auto; padding-top:120px}
+    }
+    @media (max-width: 680px){
+      .container{width:min(100% - 20px, 1200px)}
+      .hero-copy,.mini-card,.card,.warning-card{padding:18px}
+      .quick-grid,.poster-grid,.gallery-grid{grid-template-columns:1fr}
+      .section{padding:24px 0}
+      .section-title{font-size:24px}
+      .lead{font-size:16px}
+      .spec-list li{flex-direction:column}
+      .spec-list span:last-child{text-align:left; max-width:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">重庆高考选题 · 笔记</span>
+        <h1>悦刻 4~5 代通配蛋系列</h1>
+        <p class="lead">十二生肖「欧版」· 一盒三颗。主打性价比、超高的冰感，只需一口瞬间提神醒脑；水果风味偏淡雅类，适合喜欢清爽型口味的人士。</p>
+        <ul class="hero-tags">
+          <li>本仓现货直发</li>
+          <li>按现有口味下单</li>
+          <li>发货前拍图确认</li>
+          <li>推荐指数 ★★★★</li>
+          <li>2% / 15ml</li>
+          <li>十盒赠 5 代无 LOGO 通配杆</li>
+        </ul>
+      </div>
+      <div class="hero-side">
+        <div class="mini-card">
+          <strong>19:00 - 21:00</strong>
+          <span>每天下午配货出单号，19 点前的订单当天发出</span>
+        </div>
+        <div class="mini-card">
+          <strong>16:30 截单</strong>
+          <span>每天四点半停发当天物流，逾时顺延到下一批次</span>
+        </div>
+        <div class="mini-card">
+          <strong>15 款现货</strong>
+          <span>桃子、青提、薄荷、荔枝、绿豆、芒果、葡萄、龙井、草莓、橙子、柠檬、菠萝、可乐、西瓜、百香果</span>
+        </div>
+        <div class="mini-card new">
+          <strong>新品（崧盒）75</strong>
+          <span>崧飞雾·冰熊 —— 口味带备选，百分百精准</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container quick-grid">
+        <div class="mini-card"><strong>一盒三颗</strong><span>十二生肖「欧版」组合规格</span></div>
+        <div class="mini-card"><strong>精准发货</strong><span>按现有口味下单，发货前拍图确认，乱发货包售后</span></div>
+        <div class="mini-card"><strong>推荐指数 ★★★★</strong><span>主打性价比与高冰感的清爽型口味线</span></div>
+        <div class="mini-card"><strong>颜色随机</strong><span>所有烟弹十盒赠送一根 5 代无 LOGO 通配杆</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container info-grid">
+        <article class="card">
+          <div class="note-top">
+            <h2 class="section-title" style="margin:0">产品信息</h2>
+            <span class="accent">资料源完整保留</span>
+          </div>
+          <p style="margin-bottom:18px;">本仓优势：订单按现有口味下单保证精准发货，发货前拍图确认；主打性价比与超高冰感，水果风味偏淡雅，适合喜欢清爽型口味的人士。</p>
+          <ul class="spec-list">
+            <li><span><b>系列</b></span><span>悦刻 4~5 代通配蛋系列</span></li>
+            <li><span><b>款式</b></span><span>十二生肖「欧版」，一盒三颗</span></li>
+            <li><span><b>烟油容量</b></span><span>15ml</span></li>
+            <li><span><b>尼古丁浓度</b></span><span>2%（资料图标注）</span></li>
+            <li><span><b>卖点</b></span><span>高冰感、一口提神醒脑、清爽型水果风味、性价比高</span></li>
+            <li><span><b>适配说明</b></span><span>悦刻 4~5 代通配方向，十盒赠 5 代无 LOGO 通配杆（颜色随机）</span></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2 class="section-title" style="margin-top:0">发货与售后</h2>
+          <ul class="notice-list">
+            <li><b>下单规则：</b>按库存下，记得备选口味；仓库太忙没法一一通知，不备选临时缺货默认发热门口味。</li>
+            <li><b>发货节奏：</b>每天下午 19 点到 21 点左右配货出单号；19 点之前的订单当天发出，批发单到付邮费 22 点左右出单号。</li>
+            <li><b>截单时间：</b>每天四点半停发当天物流。</li>
+            <li><b>地址修改：</b>下单后没法改地址、无法召回快递，买定离手。</li>
+            <li><b>充电提醒：</b>不要用充电宝、快充，充电烧坏主板不予售后。</li>
+            <li><b>售后凭证：</b>所有售后必须要有开箱视频，边拆边录，清楚拍到单号与产品同框；只发照片均不售后。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="flavor-panel">
+          <h2 class="section-title" style="margin-top:0">现货库存口味</h2>
+          <p class="section-desc">以下口味来自原始资料图的库存文字信息，作为页面主文案完整留存。</p>
+          <ul class="flavor-tags">
+            <li>桃子</li><li>青提</li><li>薄荷</li><li>荔枝</li><li>绿豆</li>
+            <li>芒果</li><li>葡萄</li><li>龙井</li><li>草莓</li><li>橙子</li>
+            <li>柠檬</li><li>菠萝</li><li>可乐</li><li>西瓜</li><li>百香果</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">主视觉海报</h2>
+        <p class="section-desc">将本次提供的成套海报物料集中整合，用于承接原图中的商品主视觉、品牌感与口味展示区。</p>
+        <div class="poster-grid">
+          <figure class="poster-card">
+            <img src="广东高考选题_素材/微信图片_20260817051021.jpg" alt="十二生肖欧版口味矩阵海报" data-full="广东高考选题_素材/微信图片_20260817051021.jpg" />
+            <figcaption>十二生肖「欧版」口味矩阵海报（CLASSIC CHINESE ZODIAC，15 口味，2% / 15ml）。</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="广东高考选题_素材/广东二厂/微信图片_20260817051338.jpg" alt="SONG 崧盒口味海报" data-full="广东高考选题_素材/广东二厂/微信图片_20260817051338.jpg" />
+            <figcaption>SONG 崧盒口味海报，对应资料图中的「新品（崧盒）75」。</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="广东高考选题_素材/广东二厂/微信图片_20260817051357.jpg" alt="ZGAR AZ PODS 5.0 海报" data-full="广东高考选题_素材/广东二厂/微信图片_20260817051357.jpg" />
+            <figcaption>ZGAR AZ PODS 5.0 海报：3% 尼古丁、6ml（3×2ml）、21 口味、380mAh。</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="广东高考选题_素材/广东二厂/微信图片_20260817051348.jpg" alt="O&M 三颗装烟弹海报" data-full="广东高考选题_素材/广东二厂/微信图片_20260817051348.jpg" />
+            <figcaption>O&amp;M 三颗装烟弹海报：1盒/3颗装、3% 尼古丁、20 种畅销口味。</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="广东高考选题_素材/广东二厂/微信图片_20260817051412.jpg" alt="COFTY 5000 海报" data-full="广东高考选题_素材/广东二厂/微信图片_20260817051412.jpg" />
+            <figcaption>COFTY 5000 PUFFS 参数海报：12ml 容量、600mAh、Type-C、3% 尼古丁。</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="广东高考选题_素材/广东二厂/微信图片_20260817051420.jpg" alt="COFTY 7000 口味海报" data-full="广东高考选题_素材/广东二厂/微信图片_20260817051420.jpg" />
+            <figcaption>COFTY MESH COIL 7000 海报：Type-C 可充电，冰度级别 ★★★★★。</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="广东高考选题_素材/广东二厂/微信图片_20260817051429.jpg" alt="COFTY 650mAh 口味海报" data-full="广东高考选题_素材/广东二厂/微信图片_20260817051429.jpg" />
+            <figcaption>COFTY 650mAh 机型海报：薄荷、绿豆、甜瓜、香芋、葡萄、草莓等口味。</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="广东高考选题_素材/微信图片_20260817051123.jpg" alt="MAX MIWU 可乐罐系列海报" data-full="广东高考选题_素材/微信图片_20260817051123.jpg" />
+            <figcaption>MAX MIWU 可乐罐系列海报：手打柠檬冰、生椰拿铁、冰爽可乐等，PICC 承保。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">单盒与细节实拍</h2>
+        <p class="section-desc">单盒正反面、手持图、打开后的产品状态图，适合替换原图中的局部展示位和卖点细节图。</p>
+        <div class="gallery-grid">
+          <figure class="gallery-card tall">
+            <img src="广东高考选题_素材/微信图片_2026-08-17_051115_848.jpg" alt="ZGAR 葡萄三颗装实拍" data-full="广东高考选题_素材/微信图片_2026-08-17_051115_848.jpg" />
+            <figcaption>ZGAR 葡萄口味盒装与三颗装实拍（2ml × 3）。</figcaption>
+          </figure>
+          <figure class="gallery-card tall">
+            <img src="广东高考选题_素材/微信图片_20260817050955.jpg" alt="生肖主题盒装实拍" data-full="广东高考选题_素材/微信图片_20260817050955.jpg" />
+            <figcaption>生肖主题盒装实拍（15ml），对应十二生肖「欧版」系列。</figcaption>
+          </figure>
+          <figure class="gallery-card tall">
+            <img src="广东高考选题_素材/微信图片_20260817051128.jpg" alt="MAX MIWU 菠萝单盒实拍" data-full="广东高考选题_素材/微信图片_20260817051128.jpg" />
+            <figcaption>MAX MIWU 单盒实拍（PINEAPPLE 菠萝风暴），含客服热线 400-188-6305。</figcaption>
+          </figure>
+          <figure class="gallery-card tall">
+            <img src="广东高考选题_素材/微信图片_20260817051054.jpg" alt="SK 香芋冰淇淋三颗装正面" data-full="广东高考选题_素材/微信图片_20260817051054.jpg" />
+            <figcaption>SK 香芋冰淇淋正面：NICOTINE 3%、X3PODS 三颗装。</figcaption>
+          </figure>
+          <figure class="gallery-card tall">
+            <img src="广东高考选题_素材/微信图片_20260817051059.jpg" alt="BINGOGO POD 盒背参数" data-full="广东高考选题_素材/微信图片_20260817051059.jpg" />
+            <figcaption>BINGOGO POD 盒背：1.1Ω、3% 盐尼古丁、2ml，含成分与警示信息。</figcaption>
+          </figure>
+          <figure class="gallery-card tall">
+            <img src="广东高考选题_素材/微信图片_20260817051133.jpg" alt="VCTO 4000 实拍" data-full="广东高考选题_素材/微信图片_20260817051133.jpg" />
+            <figcaption>4000 口一次性设备实拍（含警示标签）。</figcaption>
+          </figure>
+          <figure class="gallery-card tall">
+            <img src="广东高考选题_素材/微信图片_20260817051139.jpg" alt="大焕彩 PRO 4000 口实拍" data-full="广东高考选题_素材/微信图片_20260817051139.jpg" />
+            <figcaption>大焕彩 PRO 4000 口实拍（含 RoHS 认证与警示信息）。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">仓储与现货展示</h2>
+        <p class="section-desc">现货陈列、散货包装、设备杆颜色与盒装库存图，用来承接原图中的「库存真实感」与发货可信度。</p>
+        <div class="stock-grid">
+          <figure class="gallery-card wide">
+            <img src="广东高考选题_素材/微信图片_20260817051048.jpg" alt="盒装现货实拍" data-full="广东高考选题_素材/微信图片_20260817051048.jpg" />
+            <figcaption>盒装现货实拍（含警示标签），强化「按库存发货」的信任感。</figcaption>
+          </figure>
+          <figure class="gallery-card square">
+            <img src="广东高考选题_素材/微信图片_20260817051144.jpg" alt="盒装设备包装实拍" data-full="广东高考选题_素材/微信图片_20260817051144.jpg" />
+            <figcaption>整盒设备包装实拍。</figcaption>
+          </figure>
+          <figure class="gallery-card square">
+            <img src="广东高考选题_素材/微信图片_20260817051153.jpg" alt="设备杆实拍" data-full="广东高考选题_素材/微信图片_20260817051153.jpg" />
+            <figcaption>设备杆实拍。</figcaption>
+          </figure>
+          <figure class="gallery-card square">
+            <img src="广东高考选题_素材/微信图片_20260817051148.jpg" alt="RELX 五代杆实拍" data-full="广东高考选题_素材/微信图片_20260817051148.jpg" />
+            <figcaption>RELX 五代杆实拍，对应「5 代无 LOGO 通配杆」赠品说明。</figcaption>
+          </figure>
+          <figure class="gallery-card square">
+            <img src="广东高考选题_素材/微信图片_20260817051157.jpg" alt="多色 RELX 通配杆实拍" data-full="广东高考选题_素材/微信图片_20260817051157.jpg" />
+            <figcaption>多色 RELX 通配杆实拍，承接「颜色随机」说明。</figcaption>
+          </figure>
+          <figure class="gallery-card square">
+            <img src="广东高考选题_素材/广东二厂/微信图片_20260817051404.jpg" alt="无 LOGO 五代杆实拍" data-full="广东高考选题_素材/广东二厂/微信图片_20260817051404.jpg" />
+            <figcaption>无 LOGO 五代杆实拍，可直接对应赠品说明。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="warning-card">
+          <h3>下单前请先看完</h3>
+          <p>这一栏保留原资料图中的提醒语气与规则重点，适合直接放在商品页底部，减少发货与售后沟通成本。</p>
+          <ol class="steps">
+            <li><b>按库存发货。</b> 按库存下，记得备选口味；仓库太忙没法一一通知，不备选临时缺货默认发热门口味。</li>
+            <li><b>截单与出单号分时进行。</b> 每天四点半停发当天物流；19:00 - 21:00 左右集中配货出单号，19 点前订单当天发出。</li>
+            <li><b>批发单节奏。</b> 批发单到付邮费，22 点左右出单号。</li>
+            <li><b>地址无法修改。</b> 下单后没法改地址、无法召回快递，买定离手。</li>
+            <li><b>不要使用充电宝与快充。</b> 快充充电烧坏主板，不予售后。</li>
+            <li><b>必须保留完整开箱视频。</b> 拿到快递第一时间拍视频、边拆边录，清楚拍到单号与产品同框；仅发照片均不售后。</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" id="closeLightbox" aria-label="关闭">×</button>
+    <img id="lightboxImage" alt="大图预览" />
+  </div>
+
+  <footer class="footer container">
+    页面文案依据原始介绍图（重庆高考选题笔记）完整留存，展示图片已全部替换为本次提供的实拍与海报素材；支持二次编辑或直接交付使用。
+  </footer>
+
+  <script>
+    const box = document.getElementById('lightbox');
+    const boxImg = document.getElementById('lightboxImage');
+    const closeBtn = document.getElementById('closeLightbox');
+
+    document.querySelectorAll('[data-full]').forEach(img => {
+      img.addEventListener('click', () => {
+        boxImg.src = img.dataset.full;
+        box.classList.add('open');
+        box.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closeLightbox(){
+      box.classList.remove('open');
+      box.setAttribute('aria-hidden', 'true');
+      boxImg.src = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    box.addEventListener('click', (e) => {
+      if (e.target === box) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
