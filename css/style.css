@@ -378,12 +378,12 @@ article.showcontent {
     transform: translateY(0);
 }
 
-.openwx-btn {
+.openwx-btn,
+.openqq-btn {
     display: block;
     width: fit-content;
     margin: 16px auto 0;
     padding: 12px 32px;
-    background: linear-gradient(135deg, #07c160, #06ad56);
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
@@ -392,13 +392,36 @@ article.showcontent {
     cursor: pointer;
     text-decoration: none;
     transition: all var(--transition);
+}
+
+.openwx-btn {
+    background: linear-gradient(135deg, #07c160, #06ad56);
     box-shadow: 0 4px 16px rgba(7, 193, 96, 0.4);
 }
 
-.openwx-btn:hover {
+.openqq-btn {
+    background: linear-gradient(135deg, #12b7f5, #0e9fd8);
+    box-shadow: 0 4px 16px rgba(18, 183, 245, 0.4);
+}
+
+.openwx-btn:hover,
+.openqq-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(7, 193, 96, 0.55);
     color: #fff;
+}
+
+.openwx-btn:hover {
+    box-shadow: 0 6px 20px rgba(7, 193, 96, 0.55);
+}
+
+.openqq-btn:hover {
+    box-shadow: 0 6px 20px rgba(18, 183, 245, 0.55);
+}
+
+.contact-card .openwx-btn,
+.contact-card .openqq-btn {
+    display: inline-block;
+    margin: 16px 6px 0;
 }
 
 /* ---------- 公司简介图 ---------- */
@@ -556,22 +579,40 @@ footer.site-footer p {
     color: #1a0a0a;
 }
 
-.wechat-modal .modal-open {
+.wechat-modal .modal-open,
+.wechat-modal .modal-qq {
     display: inline-block;
-    margin-top: 16px;
+    margin: 16px 6px 0;
     padding: 12px 28px;
-    background: linear-gradient(135deg, #07c160, #06ad56);
     color: #fff;
     font-weight: 700;
     border-radius: 30px;
     text-decoration: none;
     transition: all var(--transition);
+}
+
+.wechat-modal .modal-open {
+    background: linear-gradient(135deg, #07c160, #06ad56);
     box-shadow: 0 4px 16px rgba(7, 193, 96, 0.4);
 }
 
-.wechat-modal .modal-open:hover {
+.wechat-modal .modal-qq {
+    background: linear-gradient(135deg, #12b7f5, #0e9fd8);
+    box-shadow: 0 4px 16px rgba(18, 183, 245, 0.4);
+}
+
+.wechat-modal .modal-open:hover,
+.wechat-modal .modal-qq:hover {
     transform: translateY(-2px);
     color: #fff;
+}
+
+.wechat-modal .modal-open:hover {
+    box-shadow: 0 6px 20px rgba(7, 193, 96, 0.55);
+}
+
+.wechat-modal .modal-qq:hover {
+    box-shadow: 0 6px 20px rgba(18, 183, 245, 0.55);
 }
 
 .wechat-modal .modal-close {
